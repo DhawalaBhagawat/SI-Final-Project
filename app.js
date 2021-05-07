@@ -25,7 +25,7 @@ app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerSpec));
 
 
 const endpoint = "https://finalproject-systemintegration.cognitiveservices.azure.com/luis/prediction/v3.0/apps/51937acc-494b-4a85-8018-66ad9956387b/slots/production/predict?subscription-key=6ff7fd9f6bad4557ad7cc760f388357a&verbose=true&show-all-intents=true&log=true&query=who are you";
-/**
+//**
  * @swagger
  * /api/homeautomation:
  *  get:
@@ -33,6 +33,12 @@ const endpoint = "https://finalproject-systemintegration.cognitiveservices.azure
  *      responses:
  *          '200':
  *              description: sucess
+ *          '400':
+ *              There is an issue with your input parameters. Please verify
+ *          '500':
+ *              Server is not responding. Please try again later
+ *
+ *
  */
 app.get('/api/homeautomation',(req,res)=>{
     axios({
