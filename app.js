@@ -58,5 +58,5 @@ app.get('/api/homeautomation',(req,res)=>{
 })
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+  console.log(`App is listening at http://localhost:${port}`);
 });
